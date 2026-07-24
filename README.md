@@ -1,12 +1,11 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+https://6a6385d17b96ad00082a5012--clever-bubblegum-7bfe49.netlify.app/
 </div>
 
 # Run and deploy your AI Studio app
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/99d5a32e-da8c-43ce-8fa7-66cd28593ae7
 
 ## Run Locally
 
@@ -18,3 +17,6 @@ View your app in AI Studio: https://ai.studio/apps/99d5a32e-da8c-43ce-8fa7-66cd2
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+https://app.netlify.com/projects/clever-bubblegum-7bfe49/deploys/6a6379e5c2debfeb250ba8d1
+
