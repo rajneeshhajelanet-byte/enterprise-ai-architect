@@ -4,7 +4,7 @@ export const PERSONAL_INFO = {
   name: 'Rajneesh Prakash Hajela',
   initials: 'RH',
   phone: '9930666595',
-  email: 'rajneesh.hajela@gmail.com',
+  email: 'rajneeshhajela.net@gmail.com',
   title: 'AI & Digital Transformation Leader | Enterprise Architect',
   location: 'India',
   linkedinUrl: 'https://www.linkedin.com/in/rajneesh-hajela/',
