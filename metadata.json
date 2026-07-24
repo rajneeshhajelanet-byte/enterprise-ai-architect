@@ -1,0 +1,13 @@
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+}
+
+{
+  "name": "Rajneesh Prakash Hajela | Enterprise AI Architect",
+  "description": "Single-page portfolio & interactive architecture slide deck for Rajneesh Prakash Hajela - AI & Digital Transformation Leader",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
