@@ -51,6 +51,7 @@ export interface ProjectItem {
   impactMetrics: string[];
   techStack: string[];
   category: string;
+  liveUrl?: string;
 }
 
 export interface ExperienceItem {
