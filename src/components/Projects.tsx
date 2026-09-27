@@ -70,9 +70,21 @@ export const Projects: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
-                    {project.title}
-                  </h3>
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-start gap-1.5 text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors leading-snug hover:underline"
+                    >
+                      <span>{project.title}</span>
+                      <ArrowUpRight className="w-4 h-4 shrink-0 mt-1 text-amber-500" />
+                    </a>
+                  ) : (
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
+                      {project.title}
+                    </h3>
+                  )}
 
                   {/* Scope */}
                   <div>

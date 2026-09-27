@@ -381,7 +381,8 @@ export const COGNIZANT_PROJECTS: ProjectItem[] = [
     outcome: 'Reduced manual call handling, improved containment rate, and freed human advisors for high-value complex tasks.',
     impactMetrics: ['45%+ Call Deflection Rate', 'Sub-second Intent Recognition', 'Free Advisor Capacity'],
     techStack: ['Agentic AI', 'Intent Detection', 'Python', 'Azure AI', 'REST APIs'],
-    category: 'Insurance & AI'
+    category: 'Insurance & AI',
+    liveUrl: 'https://studio.otera.ai/workspace/332/apps/1140/workflows/aEW9tRk46nHW8lUQ'
   },
   {
     id: 'policy-renewal',
@@ -392,7 +393,8 @@ export const COGNIZANT_PROJECTS: ProjectItem[] = [
     outcome: 'Faster policy issuance, reduced manual underwriting effort, and integrated Salesforce-based tracking.',
     impactMetrics: ['80% Reduction in Cycle Time', 'Multi-Quote Engine', 'Salesforce Integration'],
     techStack: ['Multi-Agent Flow', 'Salesforce API', 'N8N', 'Python', 'DocuSign'],
-    category: 'Insurance & AI'
+    category: 'Insurance & AI',
+    liveUrl: 'https://studio.otera.ai/workspace/332/apps/1140/workflows/3LSf4m9LDEPxOrM1'
   },
   {
     id: 'kyb-aml-compliance',
@@ -403,7 +405,8 @@ export const COGNIZANT_PROJECTS: ProjectItem[] = [
     outcome: 'Automated compliance workflows, reduced operational risk, and ensured strict regulatory alignment.',
     impactMetrics: ['40% Operating Cost Reduction', '100% Audit Lineage', 'Zero-Risk Verification'],
     techStack: ['LangGraph', 'CrewAI', 'Otera AI', 'N8N', 'RAG', 'Vector Search'],
-    category: 'FinTech & Compliance'
+    category: 'FinTech & Compliance',
+    liveUrl: 'https://studio.otera.ai/workspace/332/apps/1140/workflows/utMUEuZNERHiQWUs'
   },
   {
     id: 'db-observability',
@@ -414,7 +417,8 @@ export const COGNIZANT_PROJECTS: ProjectItem[] = [
     outcome: 'Automated monitoring, SQL query optimization, incident reporting, and 80%+ MTTR reduction.',
     impactMetrics: ['80%+ MTTR Reduction', 'Automated SQL Tuning', 'Real-Time Telemetry'],
     techStack: ['Streamlit', 'Python', 'LLMs', 'Datadog', 'CloudWatch', 'PostgreSQL'],
-    category: 'AIOps & Infrastructure'
+    category: 'AIOps & Infrastructure',
+    liveUrl: 'https://github.com/oterademoacrisure/Observability_Demo'
   },
   {
     id: 'bluebolt-db-optimizer',
@@ -436,7 +440,8 @@ export const COGNIZANT_PROJECTS: ProjectItem[] = [
     outcome: 'Compliance-ready automation, improved auditability, and accelerated batch validation.',
     impactMetrics: ['Audit-Ready Workflow', 'Zero-Mistake Protocol', 'Multi-Agent Exchange'],
     techStack: ['Neuro SAN Studio', 'AutoGen', 'LangChain', 'Azure AI Foundry', 'Python'],
-    category: 'Pharma & Compliance'
+    category: 'Pharma & Compliance',
+    liveUrl: 'https://github.com/cognizant-ai-lab/neuro-san-studio'
   },
   {
     id: 'call-center-auditing',
