@@ -7,8 +7,15 @@ interface ContactProps {
   onOpenResume: () => void;
 }
 
+const encodeFormData = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+
 export const ContactSection: React.FC<ContactProps> = ({ onOpenResume }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,10 +24,24 @@ export const ContactSection: React.FC<ContactProps> = ({ onOpenResume }) => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) return;
-    setFormSubmitted(true);
+
+    setSubmitting(true);
+    setSubmitError(false);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData({ 'form-name': 'contact', ...formData })
+      });
+      setFormSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -136,9 +157,14 @@ export const ContactSection: React.FC<ContactProps> = ({ onOpenResume }) => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form name="contact" onSubmit={handleSubmit} className="space-y-4">
                   <h3 className="text-lg font-bold text-slate-900 mb-1">Direct Consultation Request</h3>
                   <p className="text-xs text-slate-500 mb-4">Send a message directly to Rajneesh Hajela.</p>
+                  {submitError && (
+                    <p className="text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+                      Something went wrong sending your message. Please try again or email directly.
+                    </p>
+                  )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -205,9 +231,10 @@ export const ContactSection: React.FC<ContactProps> = ({ onOpenResume }) => {
 
                   <button
                     type="submit"
-                    className="w-full py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white font-bold text-xs rounded-lg flex items-center justify-center gap-2 transition-all shadow-md shadow-amber-500/20"
+                    disabled={submitting}
+                    className="w-full py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 disabled:opacity-60 text-white font-bold text-xs rounded-lg flex items-center justify-center gap-2 transition-all shadow-md shadow-amber-500/20"
                   >
-                    <span>Submit Consultation Request</span>
+                    <span>{submitting ? 'Sending...' : 'Submit Consultation Request'}</span>
                     <Send className="w-3.5 h-3.5" />
                   </button>
                 </form>
