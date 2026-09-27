@@ -448,6 +448,17 @@ export const COGNIZANT_PROJECTS: ProjectItem[] = [
     impactMetrics: ['Transparent Audit Trail', 'Camunda Workflow', 'Automated QC Scoring'],
     techStack: ['Camunda BPM', 'Java', 'Spring Boot', '.NET Web API', 'SQL Server'],
     category: 'Process Automation'
+  },
+  {
+    id: 'sdlc-ai-acceleration',
+    title: 'AI-Accelerated SDLC Automation Platform',
+    role: 'Enterprise AI Architect',
+    company: 'Cognizant',
+    scope: 'Architected a GenAI-assisted SDLC pipeline covering requirement analysis, automated code review, unit test generation, and CI/CD quality gates.',
+    outcome: 'Shortened sprint cycle times, improved code quality consistency, and cut manual review effort across delivery teams.',
+    impactMetrics: ['35% Faster Sprint Cycles', '60% Automated Code Review Coverage', 'CI/CD Quality Gates'],
+    techStack: ['GitHub Copilot', 'Azure DevOps', 'Python', 'LLMs', 'SonarQube', 'GitHub Actions'],
+    category: 'SDLC & DevOps'
   }
 ];
 
